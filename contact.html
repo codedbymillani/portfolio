@@ -53,20 +53,20 @@
                 </div>
             </div>
 
-            <!-- Contact Input Form Layout -->
+           <!-- Contact Input Form Layout -->
             <div class="contact-form-card">
-                <form id="portfolio-form" onsubmit="event.preventDefault(); alert('Message noted! (Form placeholder configured correctly.)');">
+                <form id="portfolio-form" action="https://formspree.io/f/xqejndqw" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="Name">
+                        <input type="text" id="name" name="name" required placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" required placeholder="Email Address">
+                        <input type="email" id="email" name="email" required placeholder="Email Address">
                     </div>
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" rows="5" required placeholder="Hey Millani, let's chat about a project..."></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Hey Millani, let's chat about a project..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary full-width">Submit <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
