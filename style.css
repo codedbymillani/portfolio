@@ -28,9 +28,13 @@ body {
         radial-gradient(at 100% 100%, rgba(255, 142, 187, 0.08) 0px, transparent 50%);
     color: var(--text-dark);
     line-height: 1.6;
-    min-height: 100-vh;
+    min-height: 100vh; /* Fixed typo: changed 100-vh to 100vh */
     display: flex;
     flex-direction: column;
+}
+
+.hero-content {
+    text-align: left; /* Explicitly align text elements left inside the grid item */
 }
 
 .container {
