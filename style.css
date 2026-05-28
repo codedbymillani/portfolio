@@ -192,10 +192,11 @@ a {
 
 /* --- Homepage Layout Components --- */
 .hero-section {
-    min-height: 90vh;
+    min-height: calc(100vh - 70px); /* Factors in the 70px fixed navbar height */
     display: flex;
     align-items: center;
-    padding: 100px 0 60px 0;
+    padding: 40px 0; /* Creates an even, cushioned margin top and bottom */
+    margin-top: 70px; /* Pushes the section safely below your navbar */
     overflow: hidden;
 }
 
