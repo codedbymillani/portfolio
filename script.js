@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const phrases = [
             "Computer Science Student",
             "Design + Code Architect",
-            "Aspiring Data Engineer"
+            "Future Software Engineer"
         ];
         let phraseIdx = 0;
         let charIdx = 0;
