@@ -28,13 +28,13 @@ body {
         radial-gradient(at 100% 100%, rgba(255, 142, 187, 0.08) 0px, transparent 50%);
     color: var(--text-dark);
     line-height: 1.6;
-    min-height: 100vh;
+    min-height: 100vh; /* Fixed typo: changed 100-vh to 100vh */
     display: flex;
     flex-direction: column;
 }
 
 .hero-content {
-    text-align: left;
+    text-align: left; /* Explicitly align text elements left inside the grid item */
 }
 
 .container {
@@ -561,14 +561,7 @@ a {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
     transition: var(--transition-smooth);
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary-pink);
-    box-shadow: 0 12px 25px rgba(255, 142, 187, 0.1);
 }
 
 .project-card.hide {
@@ -576,7 +569,7 @@ a {
 }
 
 .project-header {
-    margin-bottom: 4px;
+    margin-bottom: 14px;
 }
 
 .proj-category {
@@ -589,53 +582,22 @@ a {
 }
 
 .project-card h3 {
-    font-size: 1.25rem;
-    color: var(--text-dark);
-    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
-.project-tagline {
+.project-card p {
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin: 0;
-}
-
-.project-section-title {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--dark-pink);
-    margin-top: 4px;
-}
-
-.project-text {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin: 0;
-}
-
-.project-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-left: 0;
-    margin: 0;
-}
-
-.project-bullets li {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    padding-left: 14px;
-    border-left: 2px solid var(--primary-pink);
+    margin-bottom: 20px;
+    flex: 1;
 }
 
 .tech-tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-top: 4px;
+    margin-bottom: 20px;
 }
 
 .tech-tags span {
@@ -649,9 +611,6 @@ a {
 .project-links {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
-    margin-top: auto;
-    padding-top: 8px;
 }
 
 /* --- Skills Inventory Section --- */
