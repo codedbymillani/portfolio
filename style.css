@@ -550,8 +550,12 @@ a {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
+    /* Default for desktop: Clean, intentional 2-column split to reduce horizontal text stretching */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: start;
+    max-width: 1000px; /* Centers the work and stops the text rows from pulling too far apart */
+    margin: 0 auto;
 }
 
 .project-card {
