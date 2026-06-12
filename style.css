@@ -28,13 +28,13 @@ body {
         radial-gradient(at 100% 100%, rgba(255, 142, 187, 0.08) 0px, transparent 50%);
     color: var(--text-dark);
     line-height: 1.6;
-    min-height: 100vh; /* Fixed typo: changed 100-vh to 100vh */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .hero-content {
-    text-align: left; /* Explicitly align text elements left inside the grid item */
+    text-align: left;
 }
 
 .container {
@@ -550,11 +550,10 @@ a {
 
 .projects-grid {
     display: grid;
-    /* Default for desktop: Clean, intentional 2-column split to reduce horizontal text stretching */
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     align-items: start;
-    max-width: 1000px; /* Centers the work and stops the text rows from pulling too far apart */
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -566,6 +565,7 @@ a {
     display: flex;
     flex-direction: column;
     transition: var(--transition-smooth);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .project-card.hide {
@@ -587,34 +587,78 @@ a {
 
 .project-card h3 {
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
-.project-card p {
-    font-size: 0.95rem;
+.project-tagline {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 8px 0 16px 0;
+    line-height: 1.4;
+}
+
+.project-section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--dark-pink);
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.project-text {
+    font-size: 0.92rem;
     color: var(--text-muted);
-    margin-bottom: 20px;
-    flex: 1;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.project-bullets {
+    margin: 6px 0 12px 0;
+    padding-left: 18px;
+    list-style-type: none;
+}
+
+.project-bullets li {
+    position: relative;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+
+.project-bullets li::before {
+    content: "•";
+    color: var(--dark-pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 .tech-tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-top: auto; 
+    padding-top: 16px;
 }
 
 .tech-tags span {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     background-color: rgba(0, 0, 0, 0.04);
+    color: var(--text-dark);
     padding: 4px 10px;
-    border-radius: 6px;
-    font-weight: 500;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
 .project-links {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 14px;
 }
 
 /* --- Skills Inventory Section --- */
@@ -818,6 +862,11 @@ a {
     .hero-ctas { justify-content: center; }
     .hero-visual { height: 350px; margin-top: 20px; }
     .about-wrapper, .contact-grid { grid-template-columns: 1fr; }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -838,86 +887,9 @@ a {
     .nav-links.active { left: 0; }
     .btn-nav { padding: 10px 24px; font-size: 1rem; }
     .section { padding: 50px 0; }
-}
-/* Project Layout Typography Cleanup */
-.project-card {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-}
 
-.project-tagline {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #111111;
-    margin: 8px 0 16px 0;
-    line-height: 1.4;
-}
-
-.project-section-title {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-    color: #db2777; /* Matches your accent theme color */
-    margin-top: 14px;
-    margin-bottom: 4px;
-}
-
-.project-text {
-    font-size: 0.92rem;
-    color: #4a4a4a;
-    line-height: 1.5;
-    margin-bottom: 8px;
-}
-
-.project-bullets {
-    margin: 6px 0 12px 0;
-    padding-left: 18px;
-    list-style-type: none;
-}
-
-.project-bullets li {
-    position: relative;
-    font-size: 0.92rem;
-    line-height: 1.5;
-    margin-bottom: 6px;
-    color: #4a4a4a;
-}
-
-.project-bullets li::before {
-    content: "•";
-    color: #db2777; /* Accent bullet color */
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-/* Forces technology tag container to the bottom for layout uniformity */
-.tech-tags {
-    margin-top: auto; 
-    padding-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tech-tags span {
-    background: #f5f5f5;
-    color: #333333;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 20px;
-}
-
-.project-links {
-    margin-top: 14px;
-    display: flex;
-    gap: 12px;
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
