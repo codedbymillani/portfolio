@@ -548,24 +548,47 @@ a {
     border-color: var(--primary-pink);
 }
 
+/* Single Viewport Container */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto; /* Enables smooth native horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Forces the scroll to snap directly onto the card */
     gap: 32px;
-    align-items: start;
-    max-width: 1000px;
+    padding: 20px 10px 30px 10px; /* Extra bottom padding prevents scrollbar overlap */
+    max-width: 700px; /* Controls the exact width of your single-card view window */
     margin: 0 auto;
+    scrollbar-width: thin; /* Clean, minimal scrollbar for Firefox */
+    scrollbar-color: var(--primary-pink) transparent;
 }
 
+/* Custom Scrollbar Styles for Chrome/Safari/Edge */
+.projects-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.projects-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+.projects-grid::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.projects-grid:hover::-webkit-scrollbar-thumb {
+    background-color: var(--primary-pink); /* Lights up when browsing */
+}
+
+/* Single Card Target Layout */
 .project-card {
+    flex: 0 0 100%; /* Forces each card to occupy 100% of the container width */
+    scroll-snap-align: center; /* Snaps the card perfectly center in the view window */
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 24px;
+    padding: 32px; /* Marginally deeper padding since it's the solo focus point */
     display: flex;
     flex-direction: column;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 6px 20px rgba(255, 142, 187, 0.04);
 }
 
 .project-card.hide {
@@ -586,10 +609,9 @@ a {
 }
 
 .project-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* Boosted slightly since it owns the screen space */
     margin-bottom: 4px;
 }
-
 .project-tagline {
     font-size: 1.05rem;
     font-weight: 500;
@@ -862,11 +884,6 @@ a {
     .hero-ctas { justify-content: center; }
     .hero-visual { height: 350px; margin-top: 20px; }
     .about-wrapper, .contact-grid { grid-template-columns: 1fr; }
-    
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -888,8 +905,8 @@ a {
     .btn-nav { padding: 10px 24px; font-size: 1rem; }
     .section { padding: 50px 0; }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    /* For mobile layout, slightly slim down the single card padding to match standard phone screens */
+    .project-card {
+        padding: 20px;
     }
 }
