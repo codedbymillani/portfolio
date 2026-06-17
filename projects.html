@@ -30,7 +30,6 @@
             <h1 class="page-title">My Projects</h1>
         </div>
 
-        <!-- Filter Controls -->
         <div class="filter-wrapper">
             <button class="filter-btn active" data-filter="all">All Projects</button>
             <button class="filter-btn" data-filter="software">Frontend</button>
@@ -38,10 +37,8 @@
             <button class="filter-btn" data-filter="data">Backend</button>
         </div>
 
-        <!-- Projects Layout Grid -->
         <div class="projects-grid" id="projects-container">
             
-            <!-- Project 1: Personal Contact Manager (LAMP Stack) -->
             <div class="project-card" data-category="data">
                 <div class="project-header">
                     <span class="proj-category"><i class="fa-solid fa-database"></i> Backend & PM</span>
@@ -61,7 +58,7 @@
                 </ul>
                 
                 <div class="project-section-title">Challenges & Solutions</div>
-                <p class="project-text">Integrating newly developed API endpoints with the frontend caused version mismatches and broken repository branches]. To solve this, I managed our Git source control workflow, isolation testing, and structured debugging sessions to successfully synchronize the database-to-frontend pipeline.</p>
+                <p class="project-text">Integrating newly developed API endpoints with the frontend caused version mismatches and broken repository branches. To solve this, I managed our Git source control workflow, isolation testing, and structured debugging sessions to successfully synchronize the database-to-frontend pipeline.</p>
 
                 <div class="tech-tags">
                     <span>MySQL</span><span>PHP</span><span>Git</span>
@@ -72,7 +69,6 @@
                 </div>
             </div>
 
-            <!-- Project 2: UX/UI (ChoreBear) -->
             <div class="project-card" data-category="ux-ui">
                 <div class="project-header">
                     <span class="proj-category"><i class="fa-solid fa-bezier-curve"></i> UX/UI</span>
@@ -97,17 +93,16 @@
                     <span>Figma</span><span>UX Research</span><span>Excel</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/millanik" target="_blank" class="btn btn-card"><i class="fa-brands fa-figma"></i> Prototype</a>
+                    <a href="https://www.figma.com/proto/ATnasIlQiG4PH0tA3LkR4h/chorebear-digital-prototype?node-id=1-3&starting-point-node-id=1%3A3&t=VkgVEQH9nX6117mh-1" target="_blank" class="btn btn-card"><i class="fa-brands fa-figma"></i> Prototype</a>
                 </div>
             </div>
 
-            <!-- Project 3: Frontend (Technical Scripting) -->
-           <div class="project-card" data-category="software">
+            <div class="project-card" data-category="software">
                 <div class="project-header">
                     <span class="proj-category"><i class="fa-solid fa-laptop-code"></i> Frontend</span>
                 </div>
                 <h3>Professional Portfolio Website</h3>
-                <p class="project-tagline">Engineered a high-performance, responsive developer portfolio platform designed to market technical engineering assets and case studies to recruiting teams.</p>
+                <p class="project-tagline">Engineered a responsive developer portfolio platform designed to market technical engineering assets and case studies to recruiting teams.</p>
                 
                 <div class="project-section-title">The Problem</div>
                 <p class="project-text">Static tech resumes fail to communicate interactive design intuition, asset accessibility, or clean frontend script engineering to modern technical talent acquisition managers.</p>
@@ -115,53 +110,53 @@
                 <div class="project-section-title">My Contributions</div>
                 <ul class="project-bullets">
                     <li>Authored a semantic, modern HTML5 structural layout optimized for clean browser parsing and search discoverability.</li>
-                    <li>Developed custom, responsive CSS3 grid and flexbox architectures to guarantee pixel-perfect asset layouts across diverse mobile, desktop, and tablet viewports.</li>
+                    <li>Developed custom, responsive CSS3 grid and flexbox architectures to guarantee pixel-perfect asset layouts across diverse mobile and desktop viewports.</li>
                     <li>Programmed client-side interactive component filters utilizing vanilla JavaScript for smooth project filter animations and asynchronous event handling.</li>
-                    <li>Integrated font icons, web assets, and structured document down-loaders while ensuring clean directory architecture and file size efficiency.</li>
+                    <li>Integrated font icons, web assets, and structured document downloaders while ensuring clean directory architecture.</li>
                 </ul>
                 
                 <div class="project-section-title">Challenges & Solutions</div>
-                <p class="project-text">Handling cross-device viewport responsiveness for complex multi-column filter layouts can introduce layout breaking and alignment shifts. I resolved this by enforcing mobile-first media queries and relative typography units, keeping card flows flexible and eliminating layout breakpoints.</p>
+                <p class="project-text">Handling cross-device viewport responsiveness for complex multi-column filter layouts can introduce layout breaking and alignment shifts. I resolved this by enforcing mobile-first media queries and relative typography units, keeping card flows flexible.</p>
 
                 <div class="tech-tags">
                     <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span>
                 </div>
                 <div class="project-links">
                     <a href="index.html" class="btn btn-card"><i class="fa-solid fa-globe"></i> Live View</a>
-                    <a href="https://github.com/millanik" target="_blank" class="btn btn-card"><i class="fa-brands fa-github"></i> Source Code</a>
+                    <a href="https://github.com/codedbymillani/portfolio" target="_blank" class="btn btn-card"><i class="fa-brands fa-github"></i> Source Code</a>
                 </div>
             </div>
-<!-- Project 4: Automated Market Intelligence Pipeline -->
+
             <div class="project-card" data-category="data">
                 <div class="project-header">
-                    <span class="proj-category"><i class="fa-solid fa-server"></i> Backend & Finance Automation</span>
+                    <span class="proj-category"><i class="fa-solid fa-server"></i> Backend & Automation</span>
                 </div>
-                <h3>Market Intelligence & Financial Reporting Pipeline</h3>
-                <p class="project-tagline">Engineered an enterprise-grade data pipeline that completely automates competitor pricing tracking and streams structured analytics into professional spreadsheet dashboards.</p>
+                <h3>Book Scraper API & Excel Dashboard</h3>
+                <p class="project-tagline">Built a dynamic web scraper API that automatically tracks book prices and generates formatted spreadsheet reports.</p>
                 
                 <div class="project-section-title">The Problem</div>
-                <p class="project-text">Corporate finance teams frequently face manual overhead and human error risks when compiling market intelligence data from siloed web sources into actionable executive reports.</p>
+                <p class="project-text">Manually checking websites to track product prices and copying data into Excel spreadsheets is slow, repetitive, and prone to human typos.</p>
                 
                 <div class="project-section-title">My Contributions</div>
                 <ul class="project-bullets">
-                    <li>Built a dynamic, scalable RESTful API with validated query parameters using <strong>FastAPI</strong> to handle multi-page web scraping routines via <strong>BeautifulSoup</strong>.</li>
-                    <li>Containerized and deployed the backend infrastructure to <strong>Render</strong> to ensure 24/7 endpoint availability and automated documentation delivery via Swagger UI.</li>
-                    <li>Programmed an automation bridge script that consumes live JSON data payloads and maps them to GAAP-compliant corporate spreadsheet layouts via <strong>OpenPyXL</strong>.</li>
-                    <li>Injected reactive accounting logic dynamically into cell matrices, automating mathematical averages, conditional audit tiers (`=IF()`), and formal ledger styling.</li>
+                    <li>Coded a flexible web scraper using <strong>FastAPI</strong> and <strong>BeautifulSoup</strong> to pull live book titles and prices automatically.</li>
+                    <li>Implemented a dynamic query parameter loop so users can change how many pages they want to scrape directly from their web browser.</li>
+                    <li>Deployed the live running API to <strong>Render</strong>, providing a public cloud address and an interactive Swagger documentation dashboard.</li>
+                    <li>Programmed a synchronization script with <strong>OpenPyXL</strong> that pulls the API data and builds an Excel sheet complete with alternating colors, mathematical formulas, and a visual bar chart.</li>
                 </ul>
                 
                 <div class="project-section-title">Challenges & Solutions</div>
-                <p class="project-text">Hardcoded scraping parameters originally restricted execution flexibility for diverse target pages. I refactored the backend architecture to support client-side query parameters, allowing stakeholders to easily throttle scraping volumes natively through an interactive Swagger UI browser interface without updating lines of code.</p>
+                <p class="project-text">Hardcoded scraping scripts usually break if you want more data. To solve this, I designed the API to take numbers directly from the web address string, allowing anyone to change the scraping depth on the fly without changing lines of code.</p>
 
                 <div class="tech-tags">
                     <span>Python</span><span>FastAPI</span><span>BeautifulSoup</span><span>OpenPyXL</span><span>Render</span>
                 </div>
                 <div class="project-links">
-                    <!-- Replace these URLs with your actual Render and GitHub repository links -->
                     <a href="https://your-project.onrender.com/docs" target="_blank" class="btn btn-card"><i class="fa-solid fa-bolt"></i> Interactive API Docs</a>
-                    <a href="https://github.com/millanik/market-intelligence-pipeline" target="_blank" class="btn btn-card"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                    <a href="https://github.com/codedbymillani/Book-Scraper-API-Excel-Dashboard" target="_blank" class="btn btn-card"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -173,7 +168,7 @@
                 <a href="https://linkedin.com/in/millanik" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-    </footer>
+    </footer >
 
     <script src="script.js"></script>
 </body>
