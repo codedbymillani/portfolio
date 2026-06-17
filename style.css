@@ -679,8 +679,8 @@ a {
 
 .project-links {
     display: flex;
-    gap: 12px;
-    margin-top: 14px;
+    flex-wrap: wrap; /* Lets buttons drop to a clean second line if the screen is small */
+    gap: 10px;       /* Adds neat spacing between the buttons */
 }
 
 /* --- Skills Inventory Section --- */
